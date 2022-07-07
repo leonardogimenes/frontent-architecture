@@ -5,15 +5,15 @@ import { MovieService } from "../service/MoviesService";
 export const MovieDetail = () => {
     const { id } = useParams();
     const [movie, setMovie] = useState({});
-    const fetchMovie = async () => {
+    const fetchMovie = async (id) => {
         const { data } = await MovieService.getMovieById(id);
         console.log(data);
         setMovie(data);
     }
 
     useEffect(() => {
-        fetchMovie();
-    });
+        fetchMovie(id);
+    }, [id]);
 
     return (
         <section>

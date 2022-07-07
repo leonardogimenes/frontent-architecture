@@ -1,13 +1,12 @@
 import { Header } from "./component/Header";
 import { Home } from "./view/Home"
 import { About } from "./view/About"
-
+import { MovieDetail } from "./view/MovieDetail";
 import {
   BrowserRouter as Router,
   Route,
   Routes
 } from "react-router-dom";
-import { MovieDetail } from "./view/MovieDetail";
 
 function App() {
   return (
